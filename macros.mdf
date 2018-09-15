@@ -1,0 +1,274 @@
+//fldigi macro definition file extended
+// This file defines the macro structure(s) for the digital modem program, fldigi
+// It also serves as a basis for any macros that are written by the user
+//
+// The top line of this file should always be the first line in every macro 
+// definition file (.mdf) for the fldigi program to recognize it as such.
+//
+
+//
+// Macro # 1
+/$ 0 
+
+
+//
+// Macro # 2
+/$ 1 
+
+
+//
+// Macro # 3
+/$ 2 
+
+
+//
+// Macro # 4
+/$ 3 
+
+
+//
+// Macro # 5
+/$ 4 
+
+
+//
+// Macro # 6
+/$ 5 
+
+
+//
+// Macro # 7
+/$ 6 
+
+
+//
+// Macro # 8
+/$ 7 
+
+
+//
+// Macro # 9
+/$ 8 
+
+
+//
+// Macro # 10
+/$ 9 Tx @>>
+<TX>
+
+//
+// Macro # 11
+/$ 10 Rx @||
+<RX>
+
+//
+// Macro # 12
+/$ 11 
+
+
+//
+// Macro # 13
+/$ 12 
+
+
+//
+// Macro # 14
+/$ 13 
+
+
+//
+// Macro # 15
+/$ 14 
+
+
+//
+// Macro # 16
+/$ 15 
+
+
+//
+// Macro # 17
+/$ 16 DominoEX 11
+<MODEM:DOMX11>
+
+//
+// Macro # 18
+/$ 17 Olivia 8-250
+<MODEM:Olivia-8-250>
+
+//
+// Macro # 19
+/$ 18 PSK 125 x 12
+<MODEM:PSK125C12>
+
+//
+// Macro # 20
+/$ 19 PSK 63R x 10
+<MODEM:PSK63RC10>
+
+//
+// Macro # 21
+/$ 20 CQ @-3+
+<TX>\n
+<IDLE:5>CQ CQ CQ de <MYCALL> <MYCALL> <MYCALL>\n
+CQ CQ CQ de <MYCALL> <MYCALL> <MYCALL> k<RX><TIMER:15>
+
+//
+// Macro # 22
+/$ 21 CQ-ID @>|
+<TX><ID>\n
+CQ CQ CQ de <MYCALL> <MYCALL> <MYCALL>\n
+CQ CQ CQ de <MYCALL> <MYCALL> <MYCALL> pse k\n
+<RX>
+
+//
+// Macro # 23
+/$ 22 
+
+
+//
+// Macro # 24
+/$ 23 
+
+
+//
+// Macro # 25
+/$ 24 Call @>|
+<NRSID:2><CWID><TX>\n
+\n
+<CALL> <CALL> de <MYCALL> <MYCALL>\n
+<CALL> <CALL> de <MYCALL> <MYCALL>\n
+pse kn\n
+\n
+\n
+<RX>
+
+//
+// Macro # 26
+/$ 25 Answer call @>|
+<TX>\n
+\n
+\n
+<CALL> <CALL> de <MYCALL> <MYCALL> kn\n
+\n
+\n
+<RX>
+
+//
+// Macro # 27
+/$ 26 RxID on
+<RXRSID:on>
+
+//
+// Macro # 28
+/$ 27 Log call
+<LOG>
+
+//
+// Macro # 29
+/$ 28 Olivia 8-500
+<MODEM:Olivia-8-500>
+
+//
+// Macro # 30
+/$ 29 Olivia 16-1000
+<MODEM:Olivia-16-1K>
+
+//
+// Macro # 31
+/$ 30 MT63-1KS
+<MODEM:MT63-1KS>
+
+//
+// Macro # 32
+/$ 31 DominoEX 44
+<MODEM:DOMX44>\n
+
+
+//
+// Macro # 33
+/$ 32 TX basic id @>|
+<TX>\n
+de <MYCALL> k\n
+\n
+\n
+<RX>
+
+//
+// Macro # 34
+/$ 33 TX with full id @>|
+<NRSID:2><CWID><TX>\n
+de <MYCALL> k\n
+\n
+\n
+<RX>
+
+//
+// Macro # 35
+/$ 34 
+
+
+//
+// Macro # 36
+/$ 35 
+
+
+//
+// Macro # 37
+/$ 36 Metar SBBV
+<WX:SBBV>
+
+//
+// Macro # 38
+/$ 37 Local Time
+<LDT:%Y-%m-%d %H:%M:%S>
+
+//
+// Macro # 39
+/$ 38 RxID off
+<RXRSID:off>
+
+//
+// Macro # 40
+/$ 39 Clear TX
+<CLRTX>
+
+//
+// Macro # 41
+/$ 40 Center at 1500
+<GOFREQ:1500>
+
+//
+// Macro # 42
+/$ 41 Center at 1000
+<GOFREQ:1000>
+
+//
+// Macro # 43
+/$ 42 Center at 2000
+<GOFREQ:2000>
+
+//
+// Macro # 44
+/$ 43 Morse
+<MODEM:CW>
+
+//
+// Macro # 45
+/$ 44 Add mode ID
+<NRSID:3>
+
+//
+// Macro # 46
+/$ 45 Add operator ID
+<CWID>
+
+//
+// Macro # 47
+/$ 46 Tune 5s
+<TUNE:5>
+
+//
+// Macro # 48
+/$ 47 
+
