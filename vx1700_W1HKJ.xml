@@ -1,0 +1,168 @@
+<!--
+	Yaesu FT-817nd rig definition file for use with fldigi
+-->
+
+<RIGDEF>
+
+<RIG>Yaesu VX-1700</RIG>
+
+<PROGRAMMER>
+	Dave Freese		W1HKJ
+	Tested by:	 	
+    Edit by:        
+</PROGRAMMER>
+
+<STATUS>
+	Verified
+	Version:	1.0
+	Date:		24 September 2018
+</STATUS>
+
+<TITLE>RigCAT - VX1700</TITLE>
+
+<!--
+default settings for initial setup
+-->
+
+<ECHO>false</ECHO>
+<TIMEOUT>250</TIMEOUT>
+<RETRIES>4</RETRIES>
+<WRITE_DELAY>5</WRITE_DELAY>
+<POST_WRITE_DELAY>50</POST_WRITE_DELAY>
+<BAUDRATE>4800</BAUDRATE>
+<RTSCTS>false</RTSCTS>
+<ECHO>false</ECHO>
+<STOPBITS>2</STOPBITS>
+<CMDPTT>true</CMDPTT>
+
+<MODES>
+	<ELEMENT>
+		<SYMBOL>LSB</SYMBOL>
+		<BYTE>00</BYTE>
+	</ELEMENT>
+	<ELEMENT>
+		<SYMBOL>USB</SYMBOL>
+		<BYTE>01</BYTE>
+	</ELEMENT>
+    <ELEMENT>
+		<SYMBOL>CW-W</SYMBOL>
+		<BYTE>02</BYTE>
+	</ELEMENT>
+    <ELEMENT>
+		<SYMBOL>CW-N</SYMBOL>
+		<BYTE>03</BYTE>
+	</ELEMENT>
+    <ELEMENT>
+		<SYMBOL>AM</SYMBOL>
+		<BYTE>04</BYTE>
+	</ELEMENT>
+</MODES>
+
+<!-- lsb mode strings should match those given in the modes id specifier 
+     These are the modes reported by the rig that actually use LSB signal processing
+-->
+
+<LSBMODES>
+	<STRING>LSB</STRING>
+	<STRING>CW-W</STRING>
+    <STRING>CW-N</STRING>
+</LSBMODES>
+
+<REPLY>
+	<SYMBOL>MODE</SYMBOL>
+	<SIZE>18</SIZE>
+	<FILL>6</FILL>
+	<DATA>
+		<DTYPE>BINARY</DTYPE>
+		<SIZE>1</SIZE>
+	</DATA>
+	<FILL>11</FILL>
+</REPLY>
+
+<REPLY>
+	<SYMBOL>FREQ</SYMBOL>
+	<SIZE>18</SIZE>
+	<FILL>1</FILL>
+	<DATA>
+		<DTYPE>BCD</DTYPE>
+		<SIZE> 8 </SIZE>
+		<MAX> 470000000 </MAX>
+		<MIN> 100000 </MIN>
+		<RESOL> 10 </RESOL>
+		<REV>false</REV>
+	 </DATA>
+	<FILL>13</FILL>
+</REPLY>
+
+<REPLY>
+	<SYMBOL>OK</SYMBOL>
+	<SIZE>1</SIZE>
+	<BYTE>00</BYTE>
+</REPLY>
+
+<REPLY>
+	<SYMBOL>BAD</SYMBOL>
+	<SIZE>1</SIZE>
+	<BYTE>F0</BYTE>
+</REPLY>
+
+<COMMAND>
+	<SYMBOL>SETFREQ</SYMBOL>
+	<SIZE>5</SIZE>
+	<DATA>
+		<DTYPE>BCD</DTYPE>
+		<SIZE> 8 </SIZE>
+		<MAX> 470000000 </MAX>
+		<MIN> 100000 </MIN>
+		<RESOL> 10 </RESOL>
+		<REV>false</REV>
+	 </DATA>
+	<BYTE>01</BYTE>
+    <OK>OK</OK>
+	<BAD>BAD</BAD>
+</COMMAND>
+
+<COMMAND>
+	<SYMBOL>GETFREQ</SYMBOL>
+	<SIZE>5</SIZE>
+	<BYTES>03 00 00 00 10</BYTES>
+	<INFO>FREQ</INFO>
+</COMMAND>
+
+<COMMAND>
+	<SYMBOL>SETMODE</SYMBOL>
+	<SIZE>5</SIZE>
+	<DATA>
+		<DTYPE>BINARY</DTYPE>
+		<SIZE>1</SIZE>
+	</DATA>
+	<BYTES>00 00 00 0C</BYTES>
+	<OK>OK</OK>
+	<BAD>BAD</BAD>
+</COMMAND>
+	
+<COMMAND>
+	<SYMBOL>GETMODE</SYMBOL>
+	<SIZE>5</SIZE>
+	<BYTES>03 00 00 00 10</BYTES>
+	<INFO>MODE</INFO>
+</COMMAND>
+
+<COMMAND>
+	<SYMBOL>PTTON</SYMBOL>
+	<SIZE>5</SIZE>
+	<BYTES>01 00 00 00 0F</BYTES>
+	<OK>OK</OK>
+	<BAD>BAD</BAD>
+</COMMAND>
+
+<COMMAND>
+	<SYMBOL>PTTOFF</SYMBOL>
+	<SIZE>5</SIZE>
+	<BYTES>00 00 00 00 0F</BYTES>
+	<OK>OK</OK>
+	<BAD>BAD</BAD>
+</COMMAND>
+
+</RIGDEF>
+
