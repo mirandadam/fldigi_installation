@@ -1,11 +1,13 @@
 #!/bin/bash
 
+if (( $EUID != 0 )); then
+    echo "This script needs root privileges for installing fldigi."
+    exit
+fi
+
+cd fldigi-current/*
 make install
-
-
-#git clone https://git.code.sf.net/p/fldigi/flrig ~/Desktop/fldigi-flrig
-#//cd ~/Desktop/fldigi-flrig
-#autoreconf
-#automake --add-missing
-#autoreconf
-#./configure --enable-optimizations=native --with-flxmlrpc
+cd ../../flrig-1.3.40/
+make install
+#cd ../../linsim-2.0.3/
+#make install
