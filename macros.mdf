@@ -8,13 +8,17 @@
 
 //
 // Macro # 1
-/$ 0 
+/$ 0 teste
+<MODEM:DOMX11>\n
+<GOFREQ:1500>\n
+<CLRTX><CLRRX>\n
+<WAV_STRING:bla.wav>\n
 
 
 //
 // Macro # 2
-/$ 1 
-
+/$ 1 message
+<message>Porque Deus amou ao mundo de tal maneira que deu o seu Filho unigênito, para que todo o que nele crê não pereça, mas tenha a vida eterna.</message>
 
 //
 // Macro # 3
@@ -48,8 +52,8 @@
 
 //
 // Macro # 9
-/$ 8 
-
+/$ 8 Tx @>|
+<TX><RX>
 
 //
 // Macro # 10
@@ -83,8 +87,8 @@
 
 //
 // Macro # 16
-/$ 15 
-
+/$ 15 Clear RX
+<CLRRX>
 
 //
 // Macro # 17
@@ -108,18 +112,13 @@
 
 //
 // Macro # 21
-/$ 20 CQ @-3+
-<TX>\n
-<IDLE:5>CQ CQ CQ de <MYCALL> <MYCALL> <MYCALL>\n
-CQ CQ CQ de <MYCALL> <MYCALL> <MYCALL> k<RX><TIMER:15>
+/$ 20 TX Morse ID @>|
+<CWID><TX><RX>
 
 //
 // Macro # 22
-/$ 21 CQ-ID @>|
-<TX><ID>\n
-CQ CQ CQ de <MYCALL> <MYCALL> <MYCALL>\n
-CQ CQ CQ de <MYCALL> <MYCALL> <MYCALL> pse k\n
-<RX>
+/$ 21 
+
 
 //
 // Macro # 23
