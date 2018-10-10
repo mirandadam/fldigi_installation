@@ -21,9 +21,9 @@ autoreconf
 ./configure --enable-optimizations=native --with-flxmlrpc --with-pulseaudio
 make -j $(nproc --all)
 
-#cd ../linsim-2.0.3
-#autoreconf
-#automake --add-missing
-#autoreconf
-#./configure --enable-optimizations=native
-#make -j $(nproc --all)
+cd ../linsim-2.0.3
+autoreconf
+automake --add-missing
+autoreconf
+./configure --enable-optimizations=native
+make -j $(nproc --all)
