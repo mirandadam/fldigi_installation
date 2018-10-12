@@ -1,7 +1,7 @@
-fldigi-current.tar.gz
-fldigi-current/
-flrig-1.3.40.tar.gz
-flrig-1.3.40/
-linsim-2.0.3.tar.gz
-linsim-2.0.3/
+fldigi-*.tar.gz
+fldigi-*/
+flrig-*.tar.gz
+flrig-*/
+linsim-*.tar.gz
+linsim-*/
 
