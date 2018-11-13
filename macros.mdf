@@ -1,139 +1,71 @@
 //fldigi macro definition file extended
-// This file defines the macro structure(s) for the digital modem program, fldigi
-// It also serves as a basis for any macros that are written by the user
-//
-// The top line of this file should always be the first line in every macro 
-// definition file (.mdf) for the fldigi program to recognize it as such.
-//
 
-//
-// Macro # 1
-/$ 0 teste
-<MODEM:DOMX11>\n
+/$ 0 Limpar TX
+<CLRTX>
+
+/$ 1 Hora local
+<LDT:%d/%m/%Y %Hh%M>
+
+/$ 2 Preâmbulo
+\n
+<CALL> de <MYCALL>\n
+
+/$ 3 Câmbio
+de <MYCALL> kn\n
+
+/$ 4 Config. Base
+<RXRSID:on>\n
+<TXRSID:on>\n
 <GOFREQ:1500>\n
-<CLRTX><CLRRX>\n
-<WAV_STRING:bla.wav>\n
+<@MODEM:Olivia-8-250>\n
 
+/$ 5 M1 (1cps)
+<MODEM:Olivia-8-250>
 
-//
-// Macro # 2
-/$ 1 message
-<message>Porque Deus amou ao mundo de tal maneira que deu o seu Filho unigênito, para que todo o que nele crê não pereça, mas tenha a vida eterna.</message>
+/$ 6 M2 (4cps)
+<MODEM:MFSK16>
 
-//
-// Macro # 3
-/$ 2 
+/$ 7 M3 (8cps)
+<MODEM:MT63-1KS>
 
-
-//
-// Macro # 4
-/$ 3 
-
-
-//
-// Macro # 5
-/$ 4 
-
-
-//
-// Macro # 6
-/$ 5 
-
-
-//
-// Macro # 7
-/$ 6 
-
-
-//
-// Macro # 8
-/$ 7 
-
-
-//
-// Macro # 9
 /$ 8 Tx @>|
 <TX><RX>
 
-//
-// Macro # 10
 /$ 9 Tx @>>
 <TX>
 
-//
-// Macro # 11
 /$ 10 Rx @||
 <RX>
 
-//
-// Macro # 12
-/$ 11 
+/$ 12 RxID on
+<RXRSID:on>
 
+/$ 13 RxID off
+<RXRSID:off>
 
-//
-// Macro # 13
-/$ 12 
+/$ 14 TxID on
+<TXRSID:on>
 
+/$ 15 TxID off
+<TXRSID:off>
 
-//
-// Macro # 14
-/$ 13 
+/$ 16 M4 (32cps)
+<MODEM:MFSK128>
 
+/$ 17 M5 (81cps)
+<MODEM:PSK250RC5>
 
-//
-// Macro # 15
-/$ 14 
+/$ 18 Config. FLARQ
+<TXRSID:off>\n
+<GOFREQ:1500>\n
+\n
 
+/$ 19 Morse
+<MODEM:CW>\n
+<WPM:6>
 
-//
-// Macro # 16
-/$ 15 Clear RX
-<CLRRX>
-
-//
-// Macro # 17
-/$ 16 DominoEX 11
-<MODEM:DOMX11>
-
-//
-// Macro # 18
-/$ 17 Olivia 8-250
-<MODEM:Olivia-8-250>
-
-//
-// Macro # 19
-/$ 18 PSK 125 x 12
-<MODEM:PSK125C12>
-
-//
-// Macro # 20
-/$ 19 PSK 63R x 10
-<MODEM:PSK63RC10>
-
-//
-// Macro # 21
-/$ 20 TX Morse ID @>|
-<CWID><TX><RX>
-
-//
-// Macro # 22
-/$ 21 
-
-
-//
-// Macro # 23
-/$ 22 
-
-
-//
-// Macro # 24
-/$ 23 
-
-
-//
-// Macro # 25
-/$ 24 Call @>|
-<NRSID:2><CWID><TX>\n
+/$ 20 Chamar @>|
+<NRSID:1><TX>\n
 \n
 <CALL> <CALL> de <MYCALL> <MYCALL>\n
 <CALL> <CALL> de <MYCALL> <MYCALL>\n
@@ -142,9 +74,7 @@ pse kn\n
 \n
 <RX>
 
-//
-// Macro # 26
-/$ 25 Answer call @>|
+/$ 21 Responder @>|
 <TX>\n
 \n
 \n
@@ -153,121 +83,41 @@ pse kn\n
 \n
 <RX>
 
-//
-// Macro # 27
-/$ 26 RxID on
-<RXRSID:on>
+/$ 22 Identificar @>|
+<NRSID:1><CWID>de <MYCALL><TX><RX>
 
-//
-// Macro # 28
-/$ 27 Log call
-<LOG>
+/$ 23 Tune 5s @>|
+<TUNE:5>
 
-//
-// Macro # 29
-/$ 28 Olivia 8-500
-<MODEM:Olivia-8-500>
-
-//
-// Macro # 30
-/$ 29 Olivia 16-1000
-<MODEM:Olivia-16-1K>
-
-//
-// Macro # 31
-/$ 30 MT63-1KS
-<MODEM:MT63-1KS>
-
-//
-// Macro # 32
-/$ 31 DominoEX 44
-<MODEM:DOMX44>\n
-
-
-//
-// Macro # 33
-/$ 32 TX basic id @>|
-<TX>\n
-de <MYCALL> k\n
-\n
-\n
-<RX>
-
-//
-// Macro # 34
-/$ 33 TX with full id @>|
-<NRSID:2><CWID><TX>\n
-de <MYCALL> k\n
-\n
-\n
-<RX>
-
-//
-// Macro # 35
-/$ 34 
-
-
-//
-// Macro # 36
-/$ 35 
-
-
-//
-// Macro # 37
-/$ 36 Metar SBBV
+/$ 24 Metar SBBV
 <WX:SBBV>
 
-//
-// Macro # 38
-/$ 37 Local Time
-<LDT:%Y-%m-%d %H:%M:%S>
+/$ 27 Log
+<LOG>
 
-//
-// Macro # 39
-/$ 38 RxID off
-<RXRSID:off>
+/$ 28 MFSK32
+<MODEM:MFSK32>
 
-//
-// Macro # 40
-/$ 39 Clear TX
-<CLRTX>
+/$ 29 MFSK64
+<MODEM:MFSK64>
 
-//
-// Macro # 41
+/$ 30 BPSK31
+<MODEM:BPSK31>
+
+/$ 31 Olivia-16-1k
+<MODEM:Olivia-16-1K>
+
+/$ 38 Msg teste
+<mensagem>Porque Deus amou ao mundo de tal maneira que deu o seu Filho unigênito, para que todo o que nele crê não pereça, mas tenha a vida eterna.</mensagem>
+
+/$ 39 Limpar RX
+<CLRRX>
+
 /$ 40 Center at 1500
 <GOFREQ:1500>
 
-//
-// Macro # 42
 /$ 41 Center at 1000
 <GOFREQ:1000>
 
-//
-// Macro # 43
 /$ 42 Center at 2000
 <GOFREQ:2000>
-
-//
-// Macro # 44
-/$ 43 Morse
-<MODEM:CW>
-
-//
-// Macro # 45
-/$ 44 Add mode ID
-<NRSID:3>
-
-//
-// Macro # 46
-/$ 45 Add operator ID
-<CWID>
-
-//
-// Macro # 47
-/$ 46 Tune 5s
-<TUNE:5>
-
-//
-// Macro # 48
-/$ 47 
-
