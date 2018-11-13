@@ -7,7 +7,7 @@ fi
 
 cd fldigi-current/*
 make install
-cd ../../flrig-1.3.40/
+cd ../../flrig-*/
 make install
-cd ../../linsim-2.0.3/
+cd ../../linsim-*/
 make install
