@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd fldigi-*/
+cd fldigi-4.0.18/
 autoreconf
 automake --add-missing
 autoreconf
@@ -14,14 +14,16 @@ autoreconf
 #cannot find -lXinerama
 make -j $(nproc --all)
 
-cd ../flrig-*
+exit 0
+
+cd ../flrig-1.3.40/
 autoreconf
 automake --add-missing
 autoreconf
 ./configure --enable-optimizations=native --with-flxmlrpc --with-pulseaudio
 make -j $(nproc --all)
 
-cd ../linsim-*
+cd ../linsim-2.0.3/
 autoreconf
 automake --add-missing
 autoreconf

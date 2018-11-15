@@ -5,9 +5,12 @@ if (( $EUID != 0 )); then
     exit
 fi
 
-cd fldigi-current/*
+cd fldigi-4.0.18/
 make install
-cd ../../flrig-*/
+
+exit 0
+
+cd ../flrig-1.3.40/
 make install
-cd ../../linsim-*/
+cd ../linsim-2.0.3/
 make install
