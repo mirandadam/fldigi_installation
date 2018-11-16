@@ -15,16 +15,16 @@
 de <MYCALL> kn\n
 
 /$ 4 Conf. Base
-<RXRSID:on><TXRSID:on><GOFREQ:1500><@MODEM:Olivia-8-250>
+<RXRSID:on><TXRSID:on><GOFREQ:1500><AFC:off><@MODEM:Olivia-8-250>
 
 /$ 5 M1 (1cps)
-<MODEM:Olivia-8-250>
+<AFC:off><@MODEM:Olivia-8-250>
 
 /$ 6 M2 (4cps)
-<MODEM:MFSK16>
+<AFC:off><@MODEM:MFSK16>
 
 /$ 7 M3 (8cps)
-<MODEM:MT63-1KS>
+<AFC:off><@MODEM:MT63-1KS>
 
 /$ 8 Tx @>|
 <TX><RX>
@@ -48,16 +48,16 @@ de <MYCALL> kn\n
 <TXRSID:off>
 
 /$ 16 M4 (32cps)
-<MODEM:MFSK128>
+<AFC:off><@MODEM:MFSK128>
 
 /$ 17 M5 (81cps)
-<MODEM:PSK250RC5>
+<AFC:off><@MODEM:PSK250RC5>
 
 /$ 18 Conf. FLARQ
-<TXRSID:off><GOFREQ:1500>
+<TXRSID:off><AFC:off><GOFREQ:1500>
 
 /$ 19 Morse
-<MODEM:CW><WPM:6>
+<AFC:off><MODEM:CW><WPM:6>
 
 /$ 20 Chamar @>|
 <NRSID:1><TX>\n
