@@ -11,13 +11,11 @@
 <CALL> de <MYCALL>\n
 
 /$ 3 Câmbio
+\n
 de <MYCALL> kn\n
 
-/$ 4 Config. Base
-<RXRSID:on>\n
-<TXRSID:on>\n
-<GOFREQ:1500>\n
-<@MODEM:Olivia-8-250>\n
+/$ 4 Conf. Base
+<RXRSID:on><TXRSID:on><GOFREQ:1500><@MODEM:Olivia-8-250>
 
 /$ 5 M1 (1cps)
 <MODEM:Olivia-8-250>
@@ -55,14 +53,11 @@ de <MYCALL> kn\n
 /$ 17 M5 (81cps)
 <MODEM:PSK250RC5>
 
-/$ 18 Config. FLARQ
-<TXRSID:off>\n
-<GOFREQ:1500>\n
-\n
+/$ 18 Conf. FLARQ
+<TXRSID:off><GOFREQ:1500>
 
 /$ 19 Morse
-<MODEM:CW>\n
-<WPM:6>
+<MODEM:CW><WPM:6>
 
 /$ 20 Chamar @>|
 <NRSID:1><TX>\n
@@ -84,7 +79,9 @@ pse kn\n
 <RX>
 
 /$ 22 Identificar @>|
-<NRSID:1><CWID>de <MYCALL><TX><RX>
+<NRSID:1><CWID>\n
+de <MYCALL>\n
+<TX><RX>
 
 /$ 23 Tune 5s @>|
 <TUNE:5>
@@ -108,16 +105,19 @@ pse kn\n
 <MODEM:Olivia-16-1K>
 
 /$ 38 Msg teste
-<mensagem>Porque Deus amou ao mundo de tal maneira que deu o seu Filho unigênito, para que todo o que nele crê não pereça, mas tenha a vida eterna.</mensagem>
+\n
+\n
+<mensagem>Porque Deus amou ao mundo de tal maneira que deu o seu Filho unigênito, para que todo o que nele crê não pereça, mas tenha a vida eterna.</mensagem>\n
+\n
 
 /$ 39 Limpar RX
 <CLRRX>
 
-/$ 40 Center at 1500
+/$ 40 Centralizar 1500
 <GOFREQ:1500>
 
-/$ 41 Center at 1000
+/$ 41 Centralizar 1000
 <GOFREQ:1000>
 
-/$ 42 Center at 2000
+/$ 42 Centralizar 2000
 <GOFREQ:2000>
