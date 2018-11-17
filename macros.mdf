@@ -29,35 +29,11 @@ de <MYCALL> kn\n
 /$ 8 Tx @>|
 <TX><RX>
 
-/$ 9 Tx @>>
-<TX>
-
-/$ 10 Rx @||
-<RX>
-
-/$ 12 RxID on
-<RXRSID:on>
-
-/$ 13 RxID off
-<RXRSID:off>
-
-/$ 14 TxID on
-<TXRSID:on>
-
-/$ 15 TxID off
-<TXRSID:off>
-
 /$ 16 M4 (32cps)
 <AFC:off><@MODEM:MFSK128>
 
 /$ 17 M5 (81cps)
 <AFC:off><@MODEM:PSK250RC5>
-
-/$ 18 Conf. FLARQ
-<TXRSID:off><AFC:off><GOFREQ:1500>
-
-/$ 19 Morse
-<AFC:off><MODEM:CW><WPM:6>
 
 /$ 20 Chamar @>|
 <NRSID:1><TX>\n
@@ -83,26 +59,26 @@ pse kn\n
 de <MYCALL>\n
 <TX><RX>
 
-/$ 23 Tune 5s @>|
-<TUNE:5>
-
 /$ 24 Metar SBBV
 <WX:SBBV>
 
 /$ 27 Log
 <LOG>
 
-/$ 28 MFSK32
+/$ 28 MFSK32 (8cps)
 <MODEM:MFSK32>
 
-/$ 29 MFSK64
+/$ 29 MFSK64 (16cps)
 <MODEM:MFSK64>
 
-/$ 30 BPSK31
-<MODEM:BPSK31>
-
-/$ 31 Olivia-16-1k
+/$ 31 Olivia-16-1k (3cps)
 <MODEM:Olivia-16-1K>
+
+/$ 37 Checklist
+Configurar nome da estação\n
+Desligar o squelch\n
+Losango ao lado do AFC tem que estar verde\n
+Nível de sinal do rádio transmitindo no rádio por volta de 6\n
 
 /$ 38 Msg teste
 \n
