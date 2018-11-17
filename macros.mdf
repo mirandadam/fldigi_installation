@@ -75,10 +75,11 @@ de <MYCALL>\n
 <MODEM:Olivia-16-1K>
 
 /$ 37 Checklist
-Configurar nome da estação\n
-Desligar o squelch\n
-Losango ao lado do AFC tem que estar verde\n
-Nível de sinal do rádio transmitindo no rádio por volta de 6\n
+- Configurar nome da estação\n
+- Desligar o squelch\n
+- Losango ao lado do AFC tem que estar verde\n
+- Nível de sinal do rádio transmitindo no rádio por volta de 6\n
+    (não pode chegar a 8)\n
 
 /$ 38 Msg teste
 \n
