@@ -65,14 +65,14 @@ de <MYCALL>\n
 /$ 27 Log
 <LOG>
 
-/$ 28 MFSK32 (8cps)
+/$ 28 Olivia-16-1k (3cps)
+<MODEM:Olivia-16-1K>
+
+/$ 29 MFSK32 (8cps)
 <MODEM:MFSK32>
 
-/$ 29 MFSK64 (16cps)
+/$ 30 MFSK64 (16cps)
 <MODEM:MFSK64>
-
-/$ 31 Olivia-16-1k (3cps)
-<MODEM:Olivia-16-1K>
 
 /$ 37 Checklist
 - Configurar nome da estação\n
