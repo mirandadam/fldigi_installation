@@ -24,7 +24,7 @@ de <MYCALL> kn\n
 <AFC:off><@MODEM:MFSK16>
 
 /$ 7 M3 (8cps)
-<AFC:off><@MODEM:MT63-1KS>
+<AFC:off><@MODEM:MFSK32>
 
 /$ 8 Tx @>|
 <TX><RX>
@@ -60,32 +60,57 @@ de <MYCALL>\n
 <TX><RX>
 
 /$ 24 Metar SBBV
-<WX:SBBV>
+Condições meteorológicas no aeroporto de Boa Vista:\n
+<WX:SBBV>\n
+
+/$ 25 Metar SBEG
+Condições meteorológicas no aeroporto de Manaus:\n
+<WX:SBEG>\n
+
+/$ 26 Metar SBUA
+Condições meteorológicas no aeroporto de São Gabriel da Cachoeira:\n
+<WX:SBUA>\n
 
 /$ 27 Log
 <LOG>
 
 /$ 28 Olivia-16-1k (3cps)
-<MODEM:Olivia-16-1K>
+<@MODEM:Olivia-16-1K>
 
-/$ 29 MFSK32 (8cps)
-<MODEM:MFSK32>
+/$ 29 MT63-1KS (8cps)
+<@MODEM:MT63-1KS>
 
 /$ 30 MFSK64 (16cps)
-<MODEM:MFSK64>
+<@MODEM:MFSK64>
 
 /$ 37 Checklist
-- Configurar nome da estação\n
-- Desligar o squelch\n
-- Losango ao lado do AFC tem que estar verde\n
-- Nível de sinal do rádio transmitindo no rádio por volta de 6\n
-    (não pode chegar a 8)\n
+Executar todas as verificações na ordem em que estão listadas.\n
+- Checklist para todas as estações:\n
+  *Nome da estação configurado\n
+  *Botão SQL (squelch) desligado\n
+  *Indicador de saturação verde (Losango ao lado do botão AFC)\n
+  *Nível de sinal do rádio transmitindo no rádio por volta de 6\n
+    (fica na parte de baixo da tela do rádio. não pode chegar a 8)\n
+  *48 botões de macro visíveis (opção View-> View/Hide 40 macros)\n
+  *Estação configurada com o botão "Conf. Base"\n
+- Checklist adicional para as estações na cidade:\n
+  *Notebook conectado à internet\n
+  *Botão SPOT ligado (para notificações)\n
+  *Notificações configuradas\n
+  *Notificações testadas\n
+  *Botão RxID desligado quando a estação estiver desassistida\n
+- Checklist para operação de modos acima de 8 cps\n
+  *Contato já estabelecido utilizando um dos modos mais lentos\n
+  *Nível de sinal muito bom\n
+  *Botão SQL (squelch) ligado\n
+  *Nível do squelch ajustado para evitar decodificar ruído\n
+  *Ao término da comunicação clicar em "Conf. Base"\n
+  *Botão SQL (squelch) desligado\n
 
 /$ 38 Msg teste
 \n
 \n
 Porque Deus amou ao mundo de tal maneira que deu o seu Filho unigênito, para que todo o que nele crê não pereça, mas tenha a vida eterna.\n
-João 3:16\n
 \n
 
 /$ 39 Limpar RX
